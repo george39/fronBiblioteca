@@ -1,0 +1,47 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-lg-8">
+
+            <div class="offset-1 mt-3">
+                <button class="btn btn-primary" [routerLink]="['/save-book']">Crear un libro</button>
+            </div>
+        </div>
+        <div class="col-12 col-lg-4 pt-5">
+            <h5>Buscar por nombre del libro</h5>
+            
+                <input class="form-control me-2" [(ngModel)]="busqueda" type="search" placeholder="Digite el nombre del libro" aria-label="Search">
+                
+              
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-10">
+            
+            <h1 class="text-center mb-5">{{title}}</h1>
+            
+            <table class="table table-hover table-responsive table-bordered">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Cantidad</th>
+                        
+                        
+                    </tr>
+                </thead>
+                <tbody *ngFor="let libros of book | searchBook: busqueda">
+                    <tr>
+                        <td>{{libros.name}}</td>
+                        <td>{{libros.description}}</td>
+                        <td>{{libros.quantity}}</td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+</div>

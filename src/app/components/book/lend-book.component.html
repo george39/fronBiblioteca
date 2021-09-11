@@ -1,0 +1,26 @@
+<div class="container col-lg-4 p-3">
+    <div class="row">
+        <div class="col-12" *ngFor="let usuario of [user]">
+            
+            <form #prestamoForm="ngForm" (ngSubmit)="onSubmit()" class="border rounded">
+
+
+                <div class="form-group p-2">
+
+                    <label for="document">Nombre del libro</label>
+                    <input type="text" class="form-control" name="document" #document="ngModel" [(ngModel)]="user.idLibro">
+                </div>
+
+                
+                
+                <div>
+
+                    <div class="form-group p-2 text-center">
+                        <button  class="btn btn-success">Guardar</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

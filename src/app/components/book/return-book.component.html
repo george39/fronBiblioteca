@@ -1,0 +1,23 @@
+<div class="container col-lg-4 pt-5">
+    <div class="row">
+        <div class="col-12">
+            <form #returnForm="ngForm" (ngSubmit)="onSubmit()" class="border rounded p-3">
+
+                <h1 class="text-center p-3">{{title}}</h1>
+                <div class="form-group p-2">
+                    <label for="idLibro">Nombre del libro</label>
+                    <input type="text" class="form-control" name="idLibro" #idLibro="ngModel" [(ngModel)]="user.idLibro">
+                </div>
+
+                <div class="form-group p-2">
+                    <label for="name">Nombre Usuario</label>
+                    <input type="text" class="form-control" name="name" #name="ngModel" [(ngModel)]="user.name">
+                </div>
+
+                <div class="form-group text-center pt-2">
+                    <button class="btn btn-success">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
